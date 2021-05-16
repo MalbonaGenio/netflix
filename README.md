@@ -5,7 +5,7 @@ Final project for a front end course.
 This project showcases the use of:
 - Firebase
 - React Router
-- Styled Componets
+- Styled Components
 - Component library
-
+- Applying global styles with styled-component
     
