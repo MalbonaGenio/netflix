@@ -16,6 +16,7 @@ export const Inner = styled.div`
 export const Item = styled.div`
     color: white;
     margin-bottom: 10px;
+    max-width: 670px;
 
     &:first-of-type {
         margin-top: 2em;
@@ -70,6 +71,7 @@ export const Header = styled.div`
 
 export const Body = styled.div`
     font-size: 26px;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
     font-weigth: normal;
     line-heigth: normal;
     background: #303030;
