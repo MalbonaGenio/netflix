@@ -23,7 +23,8 @@ export const Item = styled.div`
 ` 
 
 export const Frame = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    max-width: 1200px;
 `
 
 export const Title = styled.h1`
@@ -43,12 +44,24 @@ export const Header = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    margin-bottom: 1px;
     font-size: 26px;
     font-weigth: normal;
     background: #303030;
     padding: .8em 1.2em;
     user-select: none;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    img {
+        filter: brightness(0) invert(1);
+        max-width: 24px;
+
+        @media (max-width: 600px) {
+            max-width: 16px;
+        }
+    }
 
     @media (max-width: 600px) {
         font-size: 16px;
@@ -56,7 +69,6 @@ export const Header = styled.div`
 ` 
 
 export const Body = styled.div`
-    max-width: 1200px;
     font-size: 26px;
     font-weigth: normal;
     line-heigth: normal;
@@ -64,6 +76,8 @@ export const Body = styled.div`
     padding: .8em 1.2em;
     user-select: none;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 
     @media (max-width: 600px) {
         font-size: 16px;
