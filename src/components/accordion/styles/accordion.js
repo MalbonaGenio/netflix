@@ -15,8 +15,10 @@ export const Inner = styled.div`
 
 export const Item = styled.div`
     color: white;
+    margin: auto;
     margin-bottom: 10px;
     max-width: 670px;
+    width: 100%;
 
     &:first-of-type {
         margin-top: 2em;
@@ -32,10 +34,10 @@ export const Title = styled.h1`
     font-size: 50px;
     line-height: 1.1;
     color: white;
-    
     margin-top: 0;    
     margin-bottom: 8px;
     text-align: center;
+
     @media (max-width: 600px) {
         font-size: 35px;
     }
@@ -52,12 +54,12 @@ export const Header = styled.div`
     padding: .8em 1.2em;
     user-select: none;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+
 
     img {
         filter: brightness(0) invert(1);
         max-width: 24px;
+        user-select: none;
 
         @media (max-width: 600px) {
             max-width: 16px;
@@ -78,8 +80,8 @@ export const Body = styled.div`
     padding: .8em 1.2em;
     user-select: none;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    white-space: pre-wrap;
+    
 
     @media (max-width: 600px) {
         font-size: 16px;
