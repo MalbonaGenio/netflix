@@ -2,7 +2,7 @@ import React from "react"
 import {Link as ReachRouterLink} from "react-router-dom"
 import {Background, Logo, Container, ButtonLink} from "./styles/header"
 
-export default function Header({background, children, ...restProps}) {
+export default function Header({background = true, children, ...restProps}) {
     return background ? <Background {...restProps}>{children}</Background> : children
 }
 
