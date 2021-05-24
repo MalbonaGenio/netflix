@@ -67,3 +67,8 @@ export const Text = styled.text`
         line-height: 22px;
     }
 `
+
+export const Break = styled.div`
+    flex-basis: 100%;
+    height: 0;
+`;
