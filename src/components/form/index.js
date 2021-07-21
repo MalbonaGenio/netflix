@@ -1,5 +1,5 @@
 import React from "react"
-import {Container, Input, Submit, Card, Title, Text, TextSmall, Link, Error} from './styles/form'
+import {Container, Input, Submit, Base, Title, Text, TextSmall, Link, Error} from './styles/form'
 
 export default function Form({children, ...restProps}) {
     return (
@@ -7,8 +7,8 @@ export default function Form({children, ...restProps}) {
     )
 }
 
-Form.Card = function FormCard({children, ...restProps}){
-    return(<Card {...restProps}>{children}</Card>)
+Form.Base = function FormBase({children, ...restProps}){
+    return(<Base {...restProps}>{children}</Base>)
 }
 
 Form.Input = function FormInput({children, ...restProps}){
