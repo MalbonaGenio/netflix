@@ -49,7 +49,7 @@ export default function Signup() {
                         onChange={({target}) => setPassword(target.value)}
                     />
 
-                    <Form.Submit disables={isInvalid} type="submit">
+                    <Form.Submit disabled={isInvalid} type="submit">
                         Sign Up
                     </Form.Submit>
 
