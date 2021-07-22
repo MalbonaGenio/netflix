@@ -86,7 +86,7 @@ export const TextSmall = styled.h2`
 
 export const Link = styled(ReachRouterLink)`
     text-decoration: none;
-    color; #fff;
+    color: #fff;
 
     &:hover {
         text-decoration: underline;
