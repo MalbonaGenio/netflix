@@ -3,14 +3,11 @@ import { HeaderContainer } from "../containers/header"
 import { FooterContainer } from "../containers/footer"
 import { Form } from '../components'
 
-
 export default function Signin() {
     const [error, setError] = useState('')
     const [emailAdress, setEmailadress] = useState('')
     const [password, setPassword] = useState('')
-
     const isInvalid = emailAdress === '' || password === ''
-
     const handleSignin = (event) => {
         event.preventDefault()
 
@@ -39,18 +36,14 @@ export default function Signin() {
                     <Form.Submit disabled={isInvalid} type="submit">
                         Sign In
                     </Form.Submit>
-
                     <Form.Text>
                         New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
                     </Form.Text>
                     <Form.TextSmall>
                         This form uses Google reCAPTCHA.
                     </Form.TextSmall>
-                
-                
                 </Form.Base>
             </Form>
-
         </HeaderContainer>
         <FooterContainer />
         </>
