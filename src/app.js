@@ -6,8 +6,8 @@ import { useAuthListener } from "./hooks"
 import * as ROUTES from "./constants/routes"
 
 export function App() {
-const { user } = useAuthListener()
-console.log(user)
+  const { user } = useAuthListener()
+
   return (
     <Router>
         <IsUserRedirect
