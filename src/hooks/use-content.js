@@ -3,7 +3,7 @@ import { FirebaseContext } from "../context/firebase";
 
 export default function useContent(target) {
     const { firebase } = useContext(FirebaseContext)
-    const [content, setContent] = useState('series')
+    const [content, setContent] = useState([])
 
 
     useEffect(() => {

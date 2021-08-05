@@ -1,9 +1,8 @@
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Header, Profiles } from "../components"
 import * as ROUTES from "../constants/routes"
 
-export function SelectProfileContainer(user, setProfile) {
+export function SelectProfileContainer({user, setProfile}) {
     return (
         <>
             <Header background={false}>
@@ -19,19 +18,16 @@ export function SelectProfileContainer(user, setProfile) {
                 <Profiles.Title>Who's watching?</Profiles.Title>
                 <Profiles.List>
                     <Profiles.User
-                        OnClick= {() => setProfile({
+                        onClick={() => setProfile({
                             displayName: user.displayName,
                             photoURL: user.photoURL
                         })}
-                    >
+                    >                    
                         <Profiles.Picture src={user.photoURL} />
                         <Profiles.Name>{user.displayName}</Profiles.Name>
                     </Profiles.User>
                 </Profiles.List>
-            </Profiles>
-        
-        <p>Profile container</p>
-        
+            </Profiles>        
         </>
     )
 }

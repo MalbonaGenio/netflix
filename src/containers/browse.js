@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Header } from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
@@ -6,20 +6,22 @@ import { FooterContainer } from './footer';
 import * as ROUTES from '../constants/routes'
 import {useContent} from '../hooks';
 
-export function BrowseContainer() {
+export function BrowseContainer( slides) {
     const [profile, setProfile] = useState({});
-    const [loading, setLoading ] = useState('true')
+    const [loading, setLoading ] = useState(true)
     const [category, setCategory] = useState('series')
     const { firebase } = useContext(FirebaseContext)
 
-    const user = {
-        displayName: "fff",
-        photoURL: "2"
-    };
+    const user = firebase.auth().currentUser || {}
 
-    const {series} = useContent('series')
-    console.log(series)
-    
+    // const {series} = useContent('series')  
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    }, [profile.displayName, profile])
+
     return profile.displayName ? (
         <>
             <Header src="joker1" dontShowOnSmallViewPort>
